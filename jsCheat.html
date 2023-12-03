@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+</head>
+<body class="cheatBody">
+    <div class="nav">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="htmlCheat.html">HTML CheatSheet</a>
+            <a href="cssCheat.html">CSS CheatSheet</a>
+        </nav>
+        <hr>
+    </div>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>value</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!-- 
+                You will see codeSection's in the 2nd column of every <td>, just done for demonstrational purposes.
+             -->
+
+            <tr>
+                <td>let</td>
+                <td>
+                    The let keyword <em>lets</em> you create a variable that has <strong>Block Scope</strong>. <br>
+                    Like all variables, it can't be redeclared.
+
+                    <div class="codeSection">
+                        <code>
+                            <span>let</span> x = <span>"Help"</span>;<br>
+                            <span>let</span> x = <span style="color: lime;">0</span>; /* &lt-- Results in error */
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>function</td>
+                <td>
+                    The function keyword defines a function. Keep in mind that in a loosely typed language such as JavaScript, <br>
+                    the functions don't state if they have a return value or not, so list it just in case. <br>
+
+                    <div class="codeSection">
+                        <code>
+                            <span>function</span> int_doSomething(int_x){<br>
+                                return <span style="color: lime">5</span> * <span>int_x</span>;<br>
+                            }
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>String.length</td>
+                <td>
+                    String.length returns the current length of the string you're using.<br>
+                    <div class="codeSection">
+                        <code>
+                            <span>let</span> x = <span>"Help"</span>;<br>
+                            console.log(x.<span>length</span>); /* &lt-- Results in 4 */<br>
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>slice()</td>
+                <td>
+                    String.slice() is a function to extract part of a string. <br>
+                    It takes up to 2 parameters (min 1.), extracts from the first index to the second,
+                    or if the second index isn't specified, it will cut the rest of the string.<br>
+
+                    <div class="codeSection">
+                        <code>
+                            <span>let</span> x = <span>"Help"</span>;<br>
+                            <span>let</span> y = x.
+                            <span class="function">slice</span>(<span style="color: lime">1</span>,<span style="color: lime">3</span>); 
+                            /* &lt-- Returns <code>el</code>  */
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>getElementById()</td>
+                <td>
+                    Searches an HTML element by it's <code>id</code> attribute, and allows you to make changes to it.<br>
+                    <div class="codeSection">
+                        <code>
+                            <span>document</span>.<span class="function">getElementById</span>(<span>"hello"</span>).innerHTML = "Help";
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>.innerHTML</td>
+                <td>
+                    When retrieving an element using <span class="function">getElementById</span>(), you can modify the internal HTML.<br>
+                    This can affect text. Observe:<br>
+
+                    <button id="innerHTMLExample" type="button" onclick="innerHTMLExample()">Click Me</button>
+                    <p id="p_modifyMe">This text will be modified</p><br>
+
+                    <div class="codeSection">
+                        <code>
+                            <span>function</span> example(){<br>
+                                <span>let</span> element = document.<span class="function">getElementById</span>("p_modifyMe");<br>
+                                <br>
+                                element.<span>innerHTML</span> = "This text has been modified";<br>
+                            }<br>
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>.style</td>
+                <td>
+                    Appending .style, as well as any style tag, to <span class="function">getElementById</span>() can allow for changing the style.<br>
+                    The above example uses it to change the modified text to green.<br>
+
+                    <div class="codeSection">
+                        <code>
+                            <span>document</span>.<span class="function">getElementById</span>(<span>"hello"</span>).<span>style</span>.color = "lime";
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>For Loop</td>
+                <td>
+                    Standard For Loop. Exact same syntax as C++/Java:<br>
+                    <div class="codeSection">
+                        <code>
+                            <span style="color: gray;">/* for( initial variable; continue condition; update) */</span><br>
+                            <span>for</span>(<span>let</span> i = 0; i &lt 10; i++){<br>
+                                /*Code you want to run over and over again*/<br>
+                            }<br>
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>While Loop</td>
+                <td>
+                    A while loop, which keeps going so long as the condition in the center is true;
+                    <div class="codeSection">
+                        <code>
+                            <span style="color: gray;">/* while (conidtion) */</span><br>
+                            <span>while</span> (condition){<br>
+                                /*Code you want to run over and over again*/<br>
+                            }<br>
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Math.random()</td>
+                <td>
+                    Generates a random number.<br>
+                    <div class="codeSection">
+                        <code>
+                            <span>let</span> num = <span>Math</span>.<span class="function">random</span>();<br>
+                            console.log(num); /* Output will be a random decimal */<br>
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>
+                    === is the true equality operator. Where it measures if the two values are both the same type AND value.<br>
+                    <div class="codeSection">
+                        <code>
+                            <span>let</span> x = "5";<br>
+                            <br>
+                            x === "5"; /* Outputs true */<br>
+                            x === 5; /* Outputs false */<br>
+
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>console.log()</td>
+                <td>
+                    Whether for debugging or just displaying crude output, console.log() can send it to the website's console.
+                </td>
+            </tr>
+            <tr>
+                <td>use strict</td>
+                <td>
+                    Enables the "strict mode" directive in JavaScript. With Strict mode, JavaScript becomes less loosely typed, good for keeping good code practice.<br>
+                    <div class="codeSection">
+                        <code>
+                            "use strict"; <br>
+                            <span>x</span> = "5";<br> /* &lt-- Causes Error since variable wasn't declared */
+
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Arrays</td>
+                <td>
+                    Arrays can hold more than one value thanks to pointers, think of them as lists. <br>
+                    <div class="codeSection">
+                        <code>
+                            <span>let</span> int_arr = [1,2,3,4];<br>
+                            console.log(int_arr); <br> /* Outputs "1,2,3,4" */<br>
+                        </code>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>BigInt</td>
+                <td>
+                    For when you need a massive number, BigInt helps. <br>
+                    Javascript numbers allocate 8 bytes compared to the usual 4, so if you need something bigger than that, fear not.<br>
+
+                    <div class="codeSection">
+                        <code>
+                            <span>let</span> x = <span style="color: yellow;">BigInt</span>(1234567890123456789012345);<br>
+
+                            /* Just make sure not to mix up BigInts and Numbers, as there's data loss involved due to size differences */<br>
+
+                        </code>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script src="scripts\script.js"></script>
+</body>
+</html>

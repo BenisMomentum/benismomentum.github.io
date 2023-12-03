@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheatsheet</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+</head>
+<body class="cheatBody">
+    <div class="nav">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="htmlCheat.html">HTML CheatSheet</a>
+            <a href="jsCheat.html">JavaScript CheatSheet</a>
+        </nav>
+        <hr>
+    </div>
+    <br>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>KEY</th>
+                    <th>VALUE</th>
+                    <!-- See what I did there? -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.</td>
+                    <td>
+                        The class selector, primarily used as <code>.example {}</code><br>
+                        Used when selecting HTML that have the <code>class</code> attribute filled. Observe:<br><br>
+                        <div class="codeSection">
+                            <code>
+                                /* HTML */<br>
+                                <br>
+                                &lt<span>div</span> class="example"&gt<br>
+                                <br> /* INSERT HTML HERE */ <br>
+                                &lt/div&gt<br>
+                                <br>
+                                /* CSS */<br>
+    
+                                <span>.example</span>{<br>
+                                    color: blue;<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#</td>
+                    <td>
+                        The ID selector. Used for selecting specific unique elements with a unique ID that's mainly used for JavaScript.
+                        Less universal than the class selector but just as applicable.
+
+                        <div class="codeSection">
+                            <code>
+                                /* HTML */<br>
+                                <br>
+                                &lt<span>div</span> id="example"&gt<br>
+                                <br> /* INSERT HTML HERE */ <br>
+                                &lt/div&gt<br>
+                                <br>
+                                /* CSS */<br>
+    
+                                <span>#example</span>{<br>
+                                    color: blue;<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>border</td>
+                    <td>
+                        The border key is short-hand when styling a border for an element.<br>
+                        <div class="codeSection">
+                            <code>
+                                <span>border</span>: 2px white dashed;<br>
+                            </code>
+                        </div>
+                        <div style="border: 2px white dashed; max-width: fit-content; margin: 0 auto; padding: 5px;">
+                            Generates this
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ViewPort Values</td>
+                    <td>
+                        Want to style something that sizes itself with the size of your window? Use viewport width values from 1-100!<br><br>
+                        <code>
+                            VW - Viewport Width. <br>
+                            VH - Viewport Height. <br>
+                            VMIN - Automatically uses the smallest Viewport value. <br>
+                            VMAX - Automatically uses the biggest Viewport value. <br>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>></td>
+                    <td>
+                        The Child Selector <code>></code> is used for when you want to select all elements that are under another element. <br>
+
+                        <div class="codeSection">
+                            <code>
+                                <span>div</span> > <span>p</span> {<br>
+                                    <span>width</span>: 30<span>vw</span>;<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>:nth-child()</td>
+                    <td>
+                        <code>:nth-child()</code> is a very tricky selector. Remember, it's used for selecting a specific child index of that type. <br>
+                        <div class="codeSection">
+                            <code>
+                                <span>div</span> > <span>a</span>:<span>nth-child(2)</span>{<br>
+                                    /* Anything that's here will apply to every second anchor element inside any div */<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>:nth-of-type()</td>
+                    <td>
+                        <code>:nth-of-type()</code> Used for selecting a specific index of any element <br>
+                        <div class="codeSection">
+                            <code>
+                                <span>div</span> > <span>a</span>:<span>nth-of-type(2)</span>{<br>
+                                    /* Anything that's here will apply to every second anchor element */<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>var()</td>
+                    <td>
+                        A function used when referencing a variable, preferrably a global variable.<br>
+                        <div class="codeSection">
+                            <code>
+                                <span>border</span>: var(--AVariable);
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>calc()</td>
+                    <td>
+                        Used for solving math operations precisely. Can only use one operation per function.<br>
+                        <div class="codeSection">
+                            <code>
+                                <span>width</span>: calc(calc(100vw * 8) / 8);
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Background</td>
+                    <td>
+                        The background property is a shorthand property, commonly for:<br>
+                        <code>[color, image, repeat, position, origin]</code><br>
+                        <div class="codeSection">
+                            <code>
+                                <span>body</span>{<br>
+                                    &nbsp;&nbsp;background: blue url("background.gif") no-repeat fixed center;<br>
+                                }<br>
+                            </code>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>margin</td>
+                    <td>
+                        Margin sets the space around the element.<br>
+                        <div class="codeSection">
+                            <code>
+                                <span>div</span> {<br>
+                                    /*Sets the margin around the entire element to 10px*/<br>
+                                    &nbsp;&nbsp; <span>margin</span>: 10<span>px</span>;<br>
+                                    <br>
+                                    /*Sets the margin above and below the element to 0, but uses auto to horizontally center it*/<br>
+                                    &nbsp;&nbsp; <span>margin</span>: 0 <span>auto</span>;<br>
+                                    
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>
+                        Display sets how the element is treated. The default generally is either block or inline.
+                        The following are some of the more commonly used ones:<br>
+                        <code>[inline, block, flex, inline-block]</code><br>
+                        <div class="codeSection">
+                            <code>
+                                <span>img</span>{<br>
+                                    <span>display</span>: flex;<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Float</td>
+                    <td>
+                        Float essentially moves an element to one side or the other,<br> moving other elements and texts out of the way within reason.<br>
+                        <div class="codeSection">
+                            <code>
+                                <span>img</span>{<br>
+                                    <span>float</span>: left;<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Clear</td>
+                    <td>
+                        Clear just moves an element below any objects that float to the direction clearance has been provided.<br>
+                        <div class="codeSection">
+                            <code>
+                                <span>img</span>{<br>
+                                    <span>float</span>: left;<br>
+                                }<br>
+                                <br>
+                                <span>p</span>{<br>
+                                    <span>clear</span>: left;<br>
+                                }<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Text-Align</td>
+                    <td>
+                        Text-Align just helps when centering certain things that are text based. <br>
+
+                        <div class="codeSection">
+                            <code>
+                                <span>p</span>{<br>
+                                    <span>text-align:</span>: left | right | center | justify;<br>
+                                }<br>
+                            </code>
+                        </div>
+
+                        <div style="padding: 5px;">
+                            <p style="text-align: left;">Left Aligned</p><br>
+                            <p style="text-align: right;">Right Aligned</p><br>
+                            <p style="text-align: center;">Center Aligned</p><br>
+                            <p style="text-align: justify;">Justify Aligned</pspan><br>
+                        </div>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

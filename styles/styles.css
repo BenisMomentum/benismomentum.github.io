@@ -1,0 +1,266 @@
+:root {
+    --largeFont: 'Major Mono Display', monospace ;
+    --smallFont: 'Courier New', Courier, monospace;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* ====DEFAULT HTML TAG SECTION==== */
+
+hr {
+    border-color: white;
+}
+
+code > span {
+    color: rgb(0, 98, 255);
+}
+
+table, th, td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    
+    padding: 10px;
+}
+
+table {
+    margin: 10vmin auto;
+
+    padding: 10px;
+
+    width: 70%;
+
+    font-family: var(--smallFont);
+}
+
+th, td:nth-child(odd), legend {
+    font-family: var(--largeFont);
+    font-weight:bold;
+    font-size: 1.4em;
+
+    text-align: center;
+    
+
+}
+
+td:nth-child(even) {
+    text-align: center;
+
+    /* Fixes bug where text exceeds the container */
+    overflow-wrap: break-word;
+    
+    font-size: 1vmax;
+}
+
+form, input, textarea, select{
+    padding: 10px;
+
+    color: white;
+
+    background-color: black;
+
+    font-family: var(--smallFont);
+}
+
+fieldset {
+    border: 1px solid white;
+    border-radius: 3px;
+
+    padding: 10px;
+}
+
+code {
+    padding: 5px;
+    font-family: var(--largeFont);
+    font-size: 0.7em;
+}
+
+ul, ol{
+    max-width: 10vw;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+/* ====BUTTON SECTION==== */
+
+button {
+    background-color: black;
+    color:white;
+
+    font-family: var(--smallFont);
+
+    border: 2px solid white;
+    border-radius: 2px;
+
+    padding: 10px;
+    margin: 10px;
+
+    transition: 0.5s;
+
+}
+
+
+/* This is to create the special effects for the button click and hover */
+
+button:hover {
+    background-color: rgb(22, 22, 22);
+    transition: 0.5s;
+}
+
+button:active {
+    transform: scale(0.9, 0.9);
+}
+
+/* ====BODY SECTION==== */
+
+/* 
+    The cheatBody and landingBody are kept seperate as the landingBody has a background gif in it.
+*/
+
+.cheatBody {
+    background-color: black;
+    color: white;
+}
+
+
+.landingBody{
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.75)), url("background.gif");
+
+    /* Credit to https://giphy.com/xponentialdesign/ */
+
+    background-size: cover;
+}
+
+.indexBody {
+    align-content: center;
+
+    /* Decided to do flex just because it wraps properly */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Stretches to the full <body> container. */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ====CLASSES==== */
+
+.codeSection{
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    /* This is done so that you're able to read and properly see the code. */
+    margin: 10px auto; 
+    max-width: 50vmin;
+    padding: 20px;
+    
+
+    font-weight: 600;
+    font-family: var(--smallFont);
+
+    /* Fixes bug where it overflows */
+    overflow-wrap: break-word;
+
+    text-align: left;
+}
+
+.codeSection > code {
+    /* Fixes issue where Large font is used over the small font from the parent of .codeSection > code */
+    font-family: var(--smallFont);
+
+    /* Makes text larger */
+    font-size: 0.9em;
+}
+
+.head{
+    /* Centering */
+    text-align: center;
+    margin: 0 auto;
+
+    /* Dimensions */
+    width: 90vw;
+    height: 40vh;
+
+    /* To see it clearly */
+    background-color: rgba(0,0,0,0.5);
+
+    /* The fade */
+    box-shadow: 40px 40px 40px rgba(0,0,0,.5);
+}
+
+
+.head > h1 {
+    /* Throwing everything at it to make it center */
+    margin: 10px auto;
+    text-align: center;
+    padding-top: 20px;
+
+    /* Setting font details */
+    font-size: 5vmin;
+    font-family: var(--largeFont);
+    font-weight: 400;
+
+    color:white;
+    transition: 0.5s;
+}
+
+.function {
+    color: yellow;
+}
+
+/* ====NAVIGATION BARS==== */
+
+.head > nav, .nav{
+    font-size: 4vmin;
+    font-family: var(--smallFont);
+    font-weight: 500;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    margin: 0 auto;
+
+    list-style-type: disc;
+}
+
+.nav {
+    font-family: var(--largeFont);
+    
+    position: fixed;
+
+    background-color: black;
+
+    width: 100%;
+}
+
+/* ====LIST ELEMENTS==== */
+
+.head > nav > a , .nav > nav > a {
+    display: inline-block;
+    text-align: center;
+}
+
+nav > a{
+    text-decoration: none;
+
+    color:white;
+
+    padding: 10px 1vmax;
+
+    transition: 0.5s;
+}
+
+nav > a:hover {
+    background-color: gray;
+    color: black;
+    transition: 0.5s;
+}
+
+

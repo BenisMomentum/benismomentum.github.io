@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheatsheet</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+</head>
+<body class="cheatBody">
+
+    <!-- 
+        Just the nav bar
+     -->
+    <div class="nav">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cssCheat.html">CSS CheatSheet</a>
+            <a href="jsCheat.html">JavaScript CheatSheet</a>
+            <hr>
+        </nav>
+    </div>
+    <br>
+    <div>
+
+        <!-- 
+            You will see this in the other 3 cheatsheet files. 
+            Effectively it seperates the terms and their meanings into different locations, along with providing examples and the code in some instances as well
+        -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Global Attributes</td>
+                    <td>
+                        The following attributes are all the most common Global attrbutes, meaning they can be used for any element:<br>
+                        <strong><code>[class, id, hidden, style, title]</code></strong>
+                     </td>
+                </tr>
+                <tr>
+                    <td>&ltstrong&gt</td>
+                    <td>The &ltstrong&gt tag just makes text bold <strong>Like this</strong></td> 
+                </tr>
+                <tr>
+                    <td>&ltabbr&gt</td>
+                    <td>
+                        The &ltabbr&gt tagdefines an abbreviation or an acronym, like<br>
+                         <abbr title="Hyper-Text Markup Language">HTML</abbr>, 
+                         <abbr title="Cascading Style Sheets">CSS</abbr>
+                          and 
+                         <abbr title="World Trade Center">WTC</abbr>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltbutton&gt</td>
+                    <td>
+                        The &ltbutton&gt tag just places a clickable button. It's use is further modified with JavaScript. Observe:<br>
+                        <button id="htmlCheatButton" type="button" onclick="htmlCheatButtonOnClick()">Click Me!</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltdiv&gt</td>
+                    <td>Arguably the most used and overused tag in all of HTML. Primarily used to section various bits of code for styling and neatness</td>
+                </tr>
+                <tr>
+                    <td>&ltiframe&gt</td>
+                    <td>&ltiframe&gt is used primarily to embed HTML within HTML, such as a YouTube link or any other website/HTML file.</td>
+                </tr>
+                <tr>
+                    <td>&ltli&gt</td>
+                    <td>The list element tag. used for lists, See Below.</td>
+                </tr>
+                <tr>
+                    <td>&ltul&gt</td>
+                    <td>
+                        &ltul&gt is an Unordered List. Used for when you just want to list items with no prescedence and with a fancy symbol before it. Observe:<br>
+                        <ul>
+                            <li>This</li>
+                            <li>Unordered</li>
+                            <li>An</li>
+                            <li>List</li>
+                            <li>Is</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltol&gt</td>
+                    <td>
+                        &ltol&gt is an Ordered List. Used for when you just want to list items with prescedence. They can be marked with Numbers, Roman Numbers or Letters. Observe:<br>
+                        <ol type="1">
+                            <li>This is</li>
+                            <li>An Ordered</li>
+                            <li>List</li>
+                        </ol>
+                        <br>
+                        <ol type="A">
+                            <li>This Is </li>
+                            <li>Also An</li>
+                            <li>Ordered List</li>
+                        </ol>
+                        <br>
+                        The "start" attribute can be used to also used to start from a number other than 1.
+                        <br>
+
+                        <ol start="67" type="1">
+                            <li>This Is </li>
+                            <li>Also An</li>
+                            <li>Ordered List</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltdl&gt</td>
+                    <td>
+                        &ltdl&gt is a Description List. Used to describe various items that are listed using &ltdt&gt for the title and &ltdd&gt for the description:<br><br>
+
+                        <dl>
+                            <dt>Website</dt>
+                            <dd>- What you are using right now.</dd>
+                            <br>
+                            <dt>Coffee</dt>
+                            <dd>- a black liquid derived from coffee beans.</dd>
+                        </dl>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltform&gt</td>
+                    <td>
+                        &ltform&gt groups inputs together in order to aggregate user inputted data and POST data to the server, or GET data:
+                        <br><br>
+
+                        <form action="mailto:example@email.com" method="post">
+                            <fieldset>
+                                <legend>Example</legend>
+
+                                <input type="text" name="uN">
+                                <br><br>
+                                <select id="options" name="randOption">
+                                    <option value="default" selected>Default</option>
+                                    <option value="opt1">Option 1</option>
+                                    <option value="opt2">Option 2</option>
+                                    <option value="opt3">Option 3</option>
+                                </select>
+                                <br><br>
+                                <textarea name="message" id="multilineComment" rows="3" cols="30"></textarea>
+                                <br><br>
+                            </fieldset>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltinput&gt</td>
+                    <td>
+                        &ltinput&gt is the primary tag used in most forms. when needing to take user input. Look above for an example.
+                        <br><br>
+                        input comes with a <code>type</code> attribute that has the following options:
+                        <code>[button, checkbox, color, date, datetime-local, email, file, image, password, etc.]</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&ltimg&gt</td>
+                    <td>
+                        &ltimg&gt is used for placing images. <code>src</code> specifies the source of the image, whether local or a URL. <br><br>
+                        <code>Width</code> and <code>Height</code> control the image dimensions.<br><br>
+                        <code>Alt</code> sets the replacement text in case the image is unable to be loaded.<br><br>
+                        <img src="styles/background.gif" width="200" height="200">
+                        <!-- Credit to https://giphy.com/xponentialdesign/ -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltaddress&gt</td>
+                    <td>
+                        &ltaddress&gt Just used for specifying an address as follows:<br><br>
+                        <address>
+                            308 Negra Arroyo Lane<br>
+                            Albuquerque, New Mexico<br>
+                            87104.
+                        </address>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&ltcode&gt</td>
+                    <td>
+                        &ltcode&gt is an inline element that displays a block of code:
+
+                        <!-- Be not afraid, it is only Assembly code -->
+
+                        <div class="codeSection" style="max-width: 70vmin;">
+                            <code style="color: orange;">
+                                0x36953100&nbsp;0&nbsp;8b4c2404&nbsp;mov ecx,[esp+0x4]<br>
+                                0x36953104&nbsp;4&nbsp;81f991806049&nbsp;cmp ecx,0x49608091&nbsp;;; object: 0x49608091 <br>
+                                0x3695310a&nbsp;10&nbsp;750a&nbsp;jnz 22  (0x36953116)<br>
+                                0x3695310c&nbsp;12&nbsp;8b4e13&nbsp;mov ecx,[esi+0x13]<br>
+                                0x3695310f&nbsp;15&nbsp;8b4917&nbsp;mov ecx,[ecx+0x17]<br>
+                                0x36953112&nbsp;18&nbsp;894c2404&nbsp;mov [esp+0x4],ecx<br>
+                                0x36953116&nbsp;22&nbsp;55&nbsp;push ebp<br>
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+<script src="scripts\script.js"></script>
+
+</html>
